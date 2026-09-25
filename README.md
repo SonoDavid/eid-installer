@@ -37,3 +37,25 @@ This repo though, gives two other ways to install the eID Reader to your compute
 It also offers a way to completely uninstall the eID Reader software:
 - **uninstall.sh**
 
+## Executing
+You can execute the scripts using the following code:
+For the terminal install (works on Debian, Ubuntu, Linux Mint)
+```
+curl -fsS https://raw.githubusercontent.com/SonoDavid/eid-installer/refs/heads/main/install.sh | sudo bash
+```
+
+For the visual install (works on Linux Mint only)
+```
+curl -fsS https://raw.githubusercontent.com/SonoDavid/eid-installer/refs/heads/main/visual_install.sh | sudo python
+```
+
+For uninstall (works on Debian, Ubuntu, Linux Mint)
+```
+curl -fsS https://raw.githubusercontent.com/SonoDavid/eid-installer/refs/heads/main/uninstall.sh | sudo bash
+```
+
+### Test installation
+The eID Reader (dutch: eID Kaartlezer) can be found in your start menu or called with the command `eid-reader`.
+If you are using Firefox, you need the Firefox addon in order to use the eID Reader online: [https://addons.mozilla.org/nl/firefox/addon/belgium-eid](https://addons.mozilla.org/nl/firefox/addon/belgium-eid)
+Test the login procedure here: [https://iamapps.belgium.be/tma/](https://iamapps.belgium.be/tma/)
+You can find further help pages here: [https://eid.belgium.be/nl/vraag-en-antwoord](https://eid.belgium.be/nl/vraag-en-antwoord)
