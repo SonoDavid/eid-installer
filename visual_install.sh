@@ -5,7 +5,7 @@ import sys
 import gi
 import subprocess
 
-gi.require_version("Gtk", "4.0")
+gi.require_version("Gtk", "3.0")
 from gi.repository import GLib, Gtk, Gio
 
 # This would typically be its own file
@@ -33,11 +33,10 @@ class AppWindow(Gtk.ApplicationWindow):
 
         self.set_default_size(500, 300)
 
-        # By default the title bar will be hide, let's show it
         self.props.show_menubar = True
 
         self.box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=10)
-        self.set_child(self.box)
+        self.add(self.box)
 
         self.create_label(text="  Volg deze twee stappen om de eID software te installeren op Linux Mint")
         self.create_label(text="1. Installeer het pakket \"eID-archive\", zodat de eID pakketrepositories beschikbaar worden.")
@@ -53,7 +52,7 @@ class AppWindow(Gtk.ApplicationWindow):
     def create_label(self, text):
         label = Gtk.Label(label="  " + text) 
         label.set_halign(Gtk.Align.START)
-        self.box.append(label)
+        self.box.add(label)
         return label
 
     def create_my_button(self, label, function):
@@ -61,7 +60,7 @@ class AppWindow(Gtk.ApplicationWindow):
         button.connect("clicked", function)
         button.set_margin_start(150)
         button.set_margin_end(150)
-        self.box.append(button)
+        self.box.add(button)
         return button
 
     def install_repo_clicked(self, widget):
@@ -92,6 +91,7 @@ class AppWindow(Gtk.ApplicationWindow):
                 ' • Op deze site kan je je <a href="https://iamapps.belgium.be/tma/" >kaartlezer testen</a>'
             )
             self.info_label.set_margin_start(50)
+        self.show_all()
 
 
 class Application(Gtk.Application):
