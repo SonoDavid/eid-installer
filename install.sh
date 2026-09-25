@@ -12,4 +12,4 @@ curl -sSL https://eid.belgium.be/sites/default/files/software/${FILENAME} -o ${F
 rm ${FILENAME}
 
 apt update
-apt install eid-mw eid-viewer
+apt install -y eid-mw eid-viewer
