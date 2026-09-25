@@ -55,7 +55,7 @@ curl -fsS https://raw.githubusercontent.com/SonoDavid/eid-installer/refs/heads/m
 ```
 
 ### Test installation
-The eID Reader (dutch: eID Kaartlezer) can be found in your start menu or called with the command `eid-reader`.
+The eID Reader (dutch: eID Kaartlezer) can be found in your start menu or called with the command `eid-viewer`.
 If you are using Firefox, you need the Firefox addon in order to use the eID Reader online: [https://addons.mozilla.org/nl/firefox/addon/belgium-eid](https://addons.mozilla.org/nl/firefox/addon/belgium-eid)
 
 Test the login procedure here: [https://iamapps.belgium.be/tma/](https://iamapps.belgium.be/tma/)
