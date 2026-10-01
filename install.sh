@@ -8,8 +8,8 @@ echo "This script will install the eID middleware and eID viewer for Ubuntu.\n
 It will download the debian package from ${DOWNLOAD_URL} and install it on your computer.
 Furthermore, it will install the eID Viewer and Middleware."
 
-curl -sSL ${DOWNLOAD_URL} -o ${FILENAME} && apt deb ${FILENAME}
+curl -sSL ${DOWNLOAD_URL} -o ${FILENAME} && dpkg --install ${FILENAME}
 rm ${FILENAME}
 
-apt update
-apt install -y eid-mw eid-viewer
+apt-get update
+apt-get install -y eid-mw eid-viewer
